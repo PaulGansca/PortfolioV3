@@ -1,3 +1,20 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
 @import 'tailwindcss/base';
 @import 'tailwindcss/components';
 @import 'tailwindcss/utilities';
+
+:root {
+  --text-slate-200: rgb(226 232 240);
+}
+
+.active .nav-indicator {
+  width: 4rem;
+  --tw-bg-opacity: 1;
+  background-color: var(--text-slate-200);
+}
+
+.active .nav-text {
+  --tw-text-opacity: 1;
+  color: var(--text-slate-200);
+}
