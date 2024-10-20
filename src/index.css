@@ -4,6 +4,10 @@
 @import 'tailwindcss/components';
 @import 'tailwindcss/utilities';
 
+body {
+  overscroll-behavior: none;
+}
+
 :root {
   --text-slate-200: rgb(226 232 240);
 }
