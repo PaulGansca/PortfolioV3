@@ -8,7 +8,7 @@ export const WorkExperienceTile = ({
   linkToCompany,
   skills,
 }: {
-  period: string;
+  period: string[];
   jobTitle: string;
   company: string;
   description: string;
@@ -21,9 +21,11 @@ export const WorkExperienceTile = ({
         <div className="absolute -inset-x-4 -inset-y-4 z-0 hidden rounded-md transition motion-reduce:transition-none lg:-inset-x-6 lg:block lg:group-hover:bg-slate-800/50 lg:group-hover:shadow-[inset_0_1px_0_0_rgba(148,163,184,0.1)] lg:group-hover:drop-shadow-lg"></div>
         <header
           className="z-10 mb-2 mt-1 text-xs font-semibold uppercase tracking-wide text-slate-500 sm:col-span-2"
-          aria-label={period}
+          aria-label={period.join(',')}
         >
-          {period}
+          {period[0]}
+          <span className="mx-2 h-px w-4 inline-block align-middle bg-slate-600" />
+          {period[1]}
         </header>
         <div className="z-10 sm:col-span-6">
           <h3 className="font-medium leading-snug text-slate-200">
