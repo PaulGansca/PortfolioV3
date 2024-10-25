@@ -27,9 +27,9 @@ export const ProjectTile = ({
             aria-hidden="true"
           >
             <path
-              fill-rule="evenodd"
+              fillRule="evenodd"
               d="M5.22 14.78a.75.75 0 001.06 0l7.22-7.22v5.69a.75.75 0 001.5 0v-7.5a.75.75 0 00-.75-.75h-7.5a.75.75 0 000 1.5h5.69l-7.22 7.22a.75.75 0 000 1.06z"
-              clip-rule="evenodd"
+              clipRule="evenodd"
             ></path>
           </svg>
         </span>
@@ -70,7 +70,7 @@ export const ProjectTile = ({
           height="48"
           decoding="async"
           data-nimg="1"
-          className="rounded border-2 border-slate-200/10 transition group-hover:border-slate-200/30 sm:order-1 sm:col-span-2 sm:translate-y-1"
+          className="rounded group-hover:scale-125 transition-all duration-500 border-2 border-slate-200/10 group-hover:border-slate-200/30 sm:order-1 sm:col-span-2 sm:translate-y-1"
           src={imgSrc}
           style={{ color: 'transparent' }}
         />

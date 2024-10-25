@@ -2,9 +2,17 @@ import { WorkExperienceTile } from './WorkExperienceTile';
 import cvPaul from '../assets/Paul Mihai Gansca Software Engineer CV.pdf';
 import { Section } from './Section';
 
-export const WorkExperience = () => {
+export const WorkExperience = ({
+  setActiveSection,
+}: {
+  setActiveSection: React.Dispatch<React.SetStateAction<string>>;
+}) => {
   return (
-    <Section id={'workexperience'} ariaLabel={'Work Experience'}>
+    <Section
+      setActiveSection={setActiveSection}
+      id={'workexperience'}
+      ariaLabel={'Work Experience'}
+    >
       <>
         <div className="sticky top-0 z-20 -mx-6 mb-4 w-screen bg-slate-900/75 px-6 py-5 backdrop-blur md:-mx-12 md:px-12 lg:sr-only lg:relative lg:top-auto lg:mx-auto lg:w-full lg:px-0 lg:py-0 lg:opacity-0">
           <h2 className="text-sm font-bold uppercase tracking-widest text-slate-200 lg:sr-only">
@@ -75,9 +83,9 @@ export const WorkExperience = () => {
                     aria-hidden="true"
                   >
                     <path
-                      fill-rule="evenodd"
+                      fillRule="evenodd"
                       d="M5.22 14.78a.75.75 0 001.06 0l7.22-7.22v5.69a.75.75 0 001.5 0v-7.5a.75.75 0 00-.75-.75h-7.5a.75.75 0 000 1.5h5.69l-7.22 7.22a.75.75 0 000 1.06z"
-                      clip-rule="evenodd"
+                      clipRule="evenodd"
                     ></path>
                   </svg>
                 </span>

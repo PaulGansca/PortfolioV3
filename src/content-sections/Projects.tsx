@@ -2,15 +2,36 @@ import { ProjectTile } from './ProjectTile';
 import { Section } from './Section';
 import flex from '../assets/flex.png';
 import bodysculpt from '../assets/BodySculpt.png';
-import pubcrawl from '../assets/mockuper(9).png';
+import expensivo from '../assets/ExpensivoThumbnail.png';
+import pubCrawl from '../assets/mockuper(9).png';
+import pubCrawl3 from '../assets/mockuper(10).png';
+import pubCrawl4 from '../assets/mockuper(11).png';
+import pubCrawl5 from '../assets/mockuper(12).png';
+import pubCrawl11 from '../assets/mockuper(8).png';
 import { Modal } from '../Modal';
 import { useState } from 'react';
+import SlideShow from '../SlideShow';
 
-export const Projects = () => {
+export const Projects = ({
+  setActiveSection,
+}: {
+  setActiveSection: React.Dispatch<React.SetStateAction<string>>;
+}) => {
   const [showModal, setShowModal] = useState(false);
   const [modalContent, setModalContent] = useState(<></>);
+  const slideshowData = [
+    { id: 0, imageLocation: pubCrawl4 },
+    { id: 1, imageLocation: pubCrawl },
+    { id: 2, imageLocation: pubCrawl11 },
+    { id: 3, imageLocation: pubCrawl5 },
+    { id: 4, imageLocation: pubCrawl3 },
+  ];
   return (
-    <Section id="projects" ariaLabel="Projects Showcase">
+    <Section
+      setActiveSection={setActiveSection}
+      id="projects"
+      ariaLabel="Projects Showcase"
+    >
       <>
         <div className="sticky top-0 z-20 -mx-6 mb-4 w-screen bg-slate-900/75 px-6 py-5 backdrop-blur md:-mx-12 md:px-12 lg:sr-only lg:relative lg:top-auto lg:mx-auto lg:w-full lg:px-0 lg:py-0 lg:opacity-0">
           <h2 className="text-sm font-bold uppercase tracking-widest text-slate-200 lg:sr-only">
@@ -53,7 +74,7 @@ export const Projects = () => {
             The goal of the app was to allow users to upload bank statements, and use AI to extract key data,
             generate insights, and display them in a clear, user-friendly interface. The app was designed to handle
             a variety of screen sizes and devices, ensuring a seamless experience anywhere.`}
-              imgSrc={flex}
+              imgSrc={expensivo}
               skills={[
                 'AI',
                 'Next JS',
@@ -66,7 +87,12 @@ export const Projects = () => {
           </div>
           <div
             className="hover:cursor-pointer"
-            onClick={() => setShowModal(true)}
+            onClick={() => {
+              setModalContent(
+                <SlideShow data={slideshowData} nonInteractive />
+              );
+              setShowModal(true);
+            }}
           >
             <ProjectTile
               title="PubCrawl"
@@ -76,7 +102,7 @@ export const Projects = () => {
             traveler or a curious local, Pub Crawl equips you with the ultimate tool to savor the flavors of
             local watering holes. Not only can you access pre-designed crawls, but you can also create and save
             your personalized pub crawls, ensuring you're always in control of your adventure.`}
-              imgSrc={pubcrawl}
+              imgSrc={pubCrawl}
               skills={[
                 'React Native',
                 'Typescript',
