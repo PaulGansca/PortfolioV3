@@ -4,6 +4,6 @@ import react from '@vitejs/plugin-react';
 // https://vitejs.dev/config/
 export default defineConfig({
   plugins: [react()],
-  base: 'PortfolioV3',
+  base: '/PortfolioV3',
   build: { outDir: 'build' },
 });
