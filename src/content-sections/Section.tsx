@@ -21,7 +21,7 @@ export const Section = ({
     if (isVisible) {
       setActiveSection(id);
     }
-  }, [isVisible]);
+  }, [id, isVisible, setActiveSection]);
   return (
     <section
       ref={ref}
