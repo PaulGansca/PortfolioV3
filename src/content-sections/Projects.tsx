@@ -56,7 +56,7 @@ export const Projects = ({
                 <iframe
                   width="560"
                   height="400"
-                  src="https://www.youtube.com/embed/pju5V9oNf2Q?si=VurfP-p9CLxTBYSw"
+                  src="https://www.youtube.com/embed/Pj_aXRnMbNw?si=JQxSLn9hjvuA4UJu"
                   title="YouTube video player"
                   frameBorder="0"
                   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
